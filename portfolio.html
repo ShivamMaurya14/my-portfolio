@@ -1239,3 +1239,20 @@ function downloadResume(e) {
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
+}
+
+/* =========== CONTACT FORM =========== */
+function submitContact(e) {
+  e.preventDefault();
+  const name = document.getElementById('cf-name').value.trim();
+  const email = document.getElementById('cf-email').value.trim();
+  const msg = document.getElementById('cf-msg').value.trim();
+  if (!name || !email || !msg) { showToast('⚠️ Please fill all fields'); return; }
+  const mailto = `mailto:shivammaurya14032005@gmail.com?subject=Portfolio Contact from ${name}&body=${encodeURIComponent('From: ' + name + ' <' + email + '>\n\n' + msg)}`;
+  window.location.href = mailto;
+  showToast('✉️ Opening your email client...');
+}
+
+</script>
+</body>
+</html>

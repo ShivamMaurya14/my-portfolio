@@ -9,7 +9,7 @@ export default defineConfig({
     minify: 'terser',
     rollupOptions: {
       input: {
-        main: './portfolio.html'
+        main: './index.html'
       }
     }
   },
